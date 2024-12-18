@@ -25,4 +25,4 @@ The synthetic sensor data is streamed in real-time to a Kafka topic, enabling se
 A Kafka consumer retrieves the streamed data and stores it in a MySQL database for persistence and query capabilities.  
 
 ### **4. Batch Processing**  
-Stored data is fetched from the MySQL database in batches to facilitate further processing and analysis, supporting advanced analytics and business intelligence workflows. 
+Stored data is fetched from the MySQL database in batches to facilitate further processing and analysis, supporting some analytics. 
