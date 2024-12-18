@@ -26,3 +26,39 @@ A Kafka consumer retrieves the streamed data and stores it in a MySQL database f
 
 ### **4. Batch Processing**  
 Stored data is fetched from the MySQL database in batches to facilitate further processing and analysis, supporting some analytics. 
+
+## **Database Setup**
+```
+CREATE TABLE YouTubeLive (
+id int AUTO_INCREMENT PRIMARY KEY,
+    Video_ID VARCHAR(30),
+    Channel_Name VARCHAR(30),
+    Country VARCHAR(30),
+    Category VARCHAR(30),
+    Comments INT,
+    Subscribers INT,
+    Views_Video INT,
+    Likes INT
+);
+```
+## **Steps to run code**
+- **Start Zookeeper**
+```
+.\bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+```
+- **Start Kafka Server**
+```
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+```
+- **Create Topic**
+```
+kafka-topics.bat --create --bootstrap-server localhost:9092 --topic lastStream
+```
+- **Open Producer**
+ ```
+  kafka-console-producer.bat --broker-list localhost:9092 --topic lastStream
+```
+-  **Open Consumer**
+```
+  kafka-console-consumer.bat --topic lastStream --bootstrap-server localhost:9092
+```
