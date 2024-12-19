@@ -30,7 +30,6 @@ Stored data is fetched from the MySQL database in batches to facilitate further 
 ## **Database Setup**
 ```
 CREATE TABLE YouTubeLive (
-id int AUTO_INCREMENT PRIMARY KEY,
     Video_ID VARCHAR(30),
     Channel_Name VARCHAR(30),
     Country VARCHAR(30),
