@@ -18,6 +18,7 @@ The system generates **synthetic sensor data** with the following fields:
 - **Views_Video**: The total number of views for the video.  
 - **Likes**: The number of likes the video has received.  
 
+
 ### **2. Data Streaming with Kafka**  
 The synthetic sensor data is streamed in real-time to a Kafka topic, enabling seamless data ingestion and high-throughput event handling.  
 
@@ -39,7 +40,13 @@ CREATE TABLE YouTubeLive (
     Views_Video INT,
     Likes INT
 );
+
 ```
+-------------
+## **Dashboard**
+![YouTube Preview](youtube.png)
+
+
 ## **Steps to run code**
 - **Start Zookeeper**
 ```
